@@ -22,6 +22,10 @@ class App extends Component {
     });
   };
 
+  filterVideo = (id) => {
+    return this.state.selectedVideo.id !== id;
+  };
+
   render() {
     return (
       <div>
@@ -29,7 +33,11 @@ class App extends Component {
         <MainVideo selectedVideo={this.state.selectedVideo} />
         <VideoDetails selectedVideo={this.state.selectedVideo} />
         <Comments />
-        <SideVideos videos={this.state.videos} handleClick={this.handleClick} />
+        <SideVideos
+          videos={this.state.videos}
+          selectedVideo={this.state.selectedVideo}
+          handleClick={this.handleClick}
+        />
       </div>
     );
   }
