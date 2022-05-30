@@ -1,0 +1,26 @@
+.header {
+  &__logo {
+    background-image: url("../../assets/Logo/BrainFlix-logo.svg");
+    background-size: cover;
+    background-position: center;
+    height: 25px;
+    width: 120px;
+  }
+  &__search {
+    background: url("../../assets/Icons/search.svg") no-repeat;
+    background-position: 2.5% 50%;
+    height: 2.25rem;
+    padding-left: 2rem;
+  }
+  &__button {
+    height: 2.5rem;
+  }
+  &__usericon {
+    background: url("../../assets/Images/Mohan-muruge.jpg");
+    background-size: cover;
+    background-position: 15% 50%;
+    height: 2.25rem;
+    width: 2.25rem;
+    border-radius: 50%;
+  }
+}
