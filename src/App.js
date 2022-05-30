@@ -6,7 +6,7 @@ import Header from "./components/Header/Header";
 import MainVideo from "./components/MainVideo/MainVideo";
 import Comments from "./components/Comments/Comments";
 import VideoDetails from "./components/VideoDetails/VideoDetails";
-import SideVideos from "./components/SideVideos/SideVideos";
+import VideoList from "./components/VideoList/VideoList";
 
 class App extends Component {
   state = {
@@ -22,8 +22,11 @@ class App extends Component {
     });
   };
 
-  filterVideo = (id) => {
-    return this.state.selectedVideo.id !== id;
+  videoFilter = (id) => {
+    let chosenVideo = this.state.videoDetails.find((video) => video.id === id);
+    this.setState({
+      selectedVideo: chosenVideo,
+    });
   };
 
   render() {
@@ -32,8 +35,8 @@ class App extends Component {
         <Header />
         <MainVideo selectedVideo={this.state.selectedVideo} />
         <VideoDetails selectedVideo={this.state.selectedVideo} />
-        <Comments />
-        <SideVideos
+        <Comments selectedVideo={this.state.selectedVideo} />
+        <VideoList
           videos={this.state.videos}
           selectedVideo={this.state.selectedVideo}
           handleClick={this.handleClick}

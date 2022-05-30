@@ -1,11 +1,19 @@
 import "./Comments.scss";
 import React from "react";
+import NewComments from "../NewComments/NewComments";
+import CommentsList from "../CommentsList/CommentsList";
 
-function Comments() {
+function Comments({ selectedVideo }) {
   return (
-    <>
-      <h1>comments placeholder</h1>
-    </>
+    <section className="comments">
+      <div className="comments__container">
+        <h2 className="commentsNum">
+          {selectedVideo.comments.length} Comments
+        </h2>
+        <NewComments />
+        <CommentsList selectedVideo={selectedVideo} />
+      </div>
+    </section>
   );
 }
 
