@@ -10,18 +10,26 @@ import SideVideos from "./components/SideVideos/SideVideos";
 
 class App extends Component {
   state = {
+    videos,
     videoDetails,
     selectedVideo: videoDetails[0],
+  };
+
+  handleClick = (id) => {
+    let chosenVideo = this.state.videoDetails.find((video) => video.id === id);
+    this.setState({
+      selectedVideo: chosenVideo,
+    });
   };
 
   render() {
     return (
       <div>
         <Header />
-        <MainVideo />
-        <VideoDetails />
+        <MainVideo selectedVideo={this.state.selectedVideo} />
+        <VideoDetails selectedVideo={this.state.selectedVideo} />
         <Comments />
-        <SideVideos />
+        <SideVideos videos={this.state.videos} handleClick={this.handleClick} />
       </div>
     );
   }
