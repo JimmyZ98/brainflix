@@ -28,6 +28,10 @@
   &__user {
     font-weight: 700;
     margin-bottom: 0.5rem;
+
+    @include tablet {
+      margin-bottom: 0.75rem;
+    }
   }
   &__text {
     color: colors.$secondary-dark;

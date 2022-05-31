@@ -2,6 +2,19 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.main-video {
+.main {
   width: 100%;
+
+  @include tablet {
+    background-color: colors.$secondary-dark;
+  }
+  &__video {
+    width: 100%;
+
+    @include tablet {
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  }
 }

@@ -12,6 +12,11 @@
     @include margin-short;
     @include padding-short;
     @include divider;
+    @include tablet {
+      font-size: 2.0625rem;
+      margin-bottom: 0;
+      border: none;
+    }
   }
   &__vidinfo {
     display: flex;
@@ -20,14 +25,25 @@
     @include margin-short;
     @include padding-short;
     @include divider;
+    @include tablet {
+      padding-bottom: 0.75rem;
+    }
   }
   &__vidinfo--left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @include tablet {
+      flex-direction: row;
+    }
   }
   &__channel {
     font-weight: 700;
+
+    @include tablet {
+      margin-right: 2rem;
+    }
   }
   &__date {
     color: colors.$primary-pale;
@@ -38,22 +54,30 @@
     justify-content: space-between;
     margin-right: 15%;
     color: colors.$primary-pale;
+
+    @include tablet {
+      flex-direction: row;
+      margin: 0;
+    }
   }
   &__views {
     display: flex;
+    @include margin-short;
+    @include tablet {
+      margin: 0;
+    }
   }
   &__views--icon {
     margin-right: 0.5rem;
-
-    @include margin-short;
-  }
-  &__views--text {
-    @include margin-short;
   }
   &__likes {
     display: flex;
   }
   &__likes--icon {
     margin-right: 0.5rem;
+
+    @include tablet {
+      margin-left: 2rem;
+    }
   }
 }

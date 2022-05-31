@@ -11,11 +11,18 @@
     @include margin-short;
     @include padding-short;
     @include divider;
+    @include tablet {
+      @include margin-top-short;
+    }
   }
   &__usericon--container {
-    margin-right: 0.5rem;
+    margin-right: 1rem;
     margin-top: 1.25rem;
+
     @include avatar-width;
+    @include tablet {
+      margin-right: 1.5rem;
+    }
   }
   &__usericon {
     background: url("../../assets/Images/Mohan-muruge.jpg");
@@ -30,8 +37,19 @@
 .form {
   width: 100%;
 
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__group {
+    width: 100%;
+
     @include margin-short;
+    @include tablet {
+      margin-bottom: 0;
+      margin-right: 1.5rem;
+    }
   }
   &__label {
     display: block;
@@ -49,6 +67,11 @@
     background-color: colors.$secondary-light;
     box-sizing: border-box;
     padding-bottom: 3.5rem;
+
+    @include tablet {
+      padding-bottom: 0;
+      @include form-height;
+    }
   }
 
   &__input:focus {
@@ -76,6 +99,12 @@
     font-size: 0.75rem;
     border: none;
     width: 100%;
+
+    @include tablet {
+      width: 9.5rem;
+      margin-bottom: 0;
+      margin-top: auto;
+    }
   }
   &__submit:hover {
     background-color: colors.$secondary-color;
