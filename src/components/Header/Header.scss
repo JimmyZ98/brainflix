@@ -5,6 +5,12 @@
 .header {
   @include side-margins;
 
+  &__inner {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
   &__logo {
     background-image: url("../../assets/Logo/BrainFlix-logo.svg");
     background-size: cover;
@@ -15,10 +21,20 @@
 
     @include margin-short;
     @include margin-top-short;
+    @include tablet {
+      margin: auto 0;
+    }
   }
   &__nav {
     width: 100%;
     position: relative;
+
+    @include tablet {
+      max-width: 70%;
+      display: flex;
+      justify-content: space-between;
+      @include margin-top-short;
+    }
   }
 
   &__search {
@@ -33,6 +49,9 @@
 
     @include form-height;
     @include margin-short;
+    @include tablet {
+      max-width: 15.5rem;
+    }
   }
   &__search::placeholder {
     color: colors.$primary-dark;
@@ -56,6 +75,9 @@
     width: 100%;
 
     @include margin-short;
+    @include tablet {
+      max-width: 9.5rem;
+    }
   }
 
   &__button:hover {
@@ -74,5 +96,8 @@
 
     @include avatar-width;
     @include form-height;
+    @include tablet {
+      position: static;
+    }
   }
 }
