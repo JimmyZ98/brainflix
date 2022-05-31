@@ -1,0 +1,23 @@
+@use "../../styles/partials/colors.scss";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.page-bottom {
+  @include desktop {
+    width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+  &__left {
+    @include desktop {
+      width: 70%;
+      border-right: 2px solid colors.$secondary-pale;
+    }
+  }
+  &__right {
+    @include desktop {
+      width: 30%;
+    }
+  }
+}

@@ -14,6 +14,9 @@
     @include tablet {
       @include margin-top-short;
     }
+    @include desktop {
+      padding-right: 1.5rem;
+    }
   }
   &__usericon--container {
     margin-right: 1rem;

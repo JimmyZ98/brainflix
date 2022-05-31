@@ -10,6 +10,10 @@
       display: flex;
       justify-content: space-between;
     }
+    @include desktop {
+      max-width: 63.75rem;
+      margin: 0 auto;
+    }
   }
   &__logo {
     background-image: url("../../assets/Logo/BrainFlix-logo.svg");
@@ -30,9 +34,9 @@
     position: relative;
 
     @include tablet {
-      max-width: 70%;
+      max-width: 35rem;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       @include margin-top-short;
     }
   }
@@ -77,6 +81,7 @@
     @include margin-short;
     @include tablet {
       max-width: 9.5rem;
+      margin-left: 1.5rem;
     }
   }
 
@@ -98,6 +103,8 @@
     @include form-height;
     @include tablet {
       position: static;
+      margin-right: 0;
+      margin-left: 2.25rem;
     }
   }
 }

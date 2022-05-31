@@ -46,3 +46,9 @@
     width: 100%;
   }
 }
+
+div.comments__single:last-child {
+  @include desktop {
+    border-bottom: none;
+  }
+}

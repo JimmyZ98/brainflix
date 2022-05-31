@@ -6,6 +6,12 @@
   @include side-margins;
   @include margin-top-tall;
 
+  @include desktop {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+
   &__title {
     font-size: 1.5rem;
 
@@ -27,6 +33,7 @@
     @include divider;
     @include tablet {
       padding-bottom: 0.75rem;
+      padding-right: 1.5rem;
     }
   }
   &__vidinfo--left {
@@ -78,6 +85,11 @@
 
     @include tablet {
       margin-left: 2rem;
+    }
+  }
+  &__text {
+    @include desktop {
+      padding-right: 1.5rem;
     }
   }
 }

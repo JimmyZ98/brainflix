@@ -8,6 +8,10 @@
     width: 100%;
 
     @include margin-short;
+    @include desktop {
+      justify-content: space-between;
+      margin: 0;
+    }
   }
   &__thumbnail {
     width: 35%;
@@ -21,6 +25,9 @@
     @include tablet {
       max-width: 7rem;
       height: 4rem;
+    }
+    @include desktop {
+      margin: 0;
     }
   }
   &__video--right {

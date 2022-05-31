@@ -5,8 +5,25 @@
 .comments {
   @include side-margins;
   @include margin-top-tall;
+  @include desktop {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
 
   &__count {
     font-weight: 700;
+  }
+  &__content {
+    @include desktop {
+      padding-right: 1.5rem;
+    }
+  }
+  &__date {
+    @include desktop {
+      position: absolute;
+      top: 0;
+      left: 40rem;
+    }
   }
 }

@@ -7,14 +7,22 @@
 
   @include tablet {
     background-color: colors.$secondary-dark;
+    display: flex;
   }
+
   &__video {
     width: 100%;
 
     @include tablet {
       width: 90%;
-      margin-left: 5%;
-      margin-right: 5%;
+      margin-left: auto;
+      margin-right: auto;
+
+      @include desktop {
+        max-width: 54rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
     }
   }
 }
