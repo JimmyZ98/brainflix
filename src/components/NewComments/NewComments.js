@@ -4,12 +4,12 @@ import React from "react";
 function NewComments() {
   return (
     <div className="comments__new">
-      <div className="comments__avatar--container">
-        <figure className="comments__avatar"></figure>
+      <div className="comments__usericon--container">
+        <figure className="comments__usericon"></figure>
       </div>
       <form className="comments__form form">
         <div className="form__group">
-          <label className="form__label" for="newComment">
+          <label className="form__label" htmlFor="newComment">
             JOIN THE CONVERSATION
           </label>
           <input

@@ -1,0 +1,111 @@
+@use "./variables" as *;
+@use "./colors";
+
+@mixin tablet {
+  @media (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin side-margins {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@mixin form-height {
+  height: 2.25rem;
+
+  @media (min-width: $tablet-breakpoint) {
+    height: 2.5rem;
+  }
+}
+
+@mixin avatar-width {
+  width: 2.25rem;
+
+  @media (min-width: $tablet-breakpoint) {
+    width: 2.5rem;
+  }
+}
+
+@mixin divider {
+  border-bottom: 2px solid colors.$secondary-pale;
+}
+
+@mixin padding-short {
+  padding-bottom: 1rem;
+
+  @media (min-width: $tablet-breakpoint) {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@mixin padding-tall {
+  padding-bottom: 1.5rem;
+
+  @media (min-width: $tablet-breakpoint) {
+    padding-bottom: 2.25rem;
+  }
+}
+
+@mixin padding-top-short {
+  padding-top: 1rem;
+
+  @media (min-width: $tablet-breakpoint) {
+    padding-top: 1.5rem;
+  }
+}
+
+@mixin padding-top-tall {
+  padding-top: 1.5rem;
+
+  @media (min-width: $tablet-breakpoint) {
+    padding-top: 2.25rem;
+  }
+}
+
+@mixin margin-short {
+  margin-bottom: 1rem;
+
+  @media (min-width: $tablet-breakpoint) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@mixin margin-tall {
+  margin-bottom: 1.5rem;
+
+  @media (min-width: $tablet-breakpoint) {
+    margin-bottom: 2.25rem;
+  }
+}
+
+@mixin margin-top-short {
+  margin-top: 1rem;
+
+  @media (min-width: $tablet-breakpoint) {
+    margin-top: 1.5rem;
+  }
+}
+
+@mixin margin-top-tall {
+  margin-top: 1.5rem;
+
+  @media (min-width: $tablet-breakpoint) {
+    margin-top: 2.25rem;
+  }
+}
+
+@mixin margin-right-short {
+  margin-right: 1rem;
+
+  @media (min-width: $tablet-breakpoint) {
+    margin-right: 1.5rem;
+  }
+}

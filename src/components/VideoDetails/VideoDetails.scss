@@ -1,0 +1,59 @@
+@use "../../styles/partials/colors.scss";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.details {
+  @include side-margins;
+  @include margin-top-tall;
+
+  &__title {
+    font-size: 1.5rem;
+
+    @include margin-short;
+    @include padding-short;
+    @include divider;
+  }
+  &__vidinfo {
+    display: flex;
+    justify-content: space-between;
+
+    @include margin-short;
+    @include padding-short;
+    @include divider;
+  }
+  &__vidinfo--left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__channel {
+    font-weight: 700;
+  }
+  &__date {
+    color: colors.$primary-pale;
+  }
+  &__vidinfo--right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 15%;
+    color: colors.$primary-pale;
+  }
+  &__views {
+    display: flex;
+  }
+  &__views--icon {
+    margin-right: 0.5rem;
+
+    @include margin-short;
+  }
+  &__views--text {
+    @include margin-short;
+  }
+  &__likes {
+    display: flex;
+  }
+  &__likes--icon {
+    margin-right: 0.5rem;
+  }
+}

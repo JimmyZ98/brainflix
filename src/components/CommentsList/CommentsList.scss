@@ -1,0 +1,44 @@
+@use "../../styles/partials/colors.scss";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.comments {
+  &__single {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    @include margin-short;
+    @include padding-short;
+    @include divider;
+  }
+  &__avatar {
+    background-color: colors.$secondary-pale;
+    background-size: cover;
+    background-position: 15% 50%;
+    border-radius: 50%;
+
+    @include avatar-width;
+    @include form-height;
+  }
+  &__avatar--container {
+    margin-right: 0.5rem;
+    @include avatar-width;
+  }
+  &__user {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  &__text {
+    color: colors.$secondary-dark;
+  }
+  &__date {
+    color: colors.$primary-pale;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__content {
+    width: 100%;
+  }
+}

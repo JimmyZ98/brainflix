@@ -1,0 +1,19 @@
+@use "./fonts" as *;
+@use "./colors";
+@use "./mixins" as *;
+@use "./variables" as *;
+
+body {
+  font-family: "AvenirNext";
+  font-weight: 400;
+  font-size: 0.8125rem;
+  color: colors.$primary-dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+  list-style-type: none;
+}

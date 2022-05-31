@@ -1,26 +1,78 @@
+@use "../../styles/partials/colors.scss";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
 .header {
+  @include side-margins;
+
   &__logo {
     background-image: url("../../assets/Logo/BrainFlix-logo.svg");
     background-size: cover;
     background-position: center;
     height: 25px;
     width: 120px;
+    margin: 0 auto;
+
+    @include margin-short;
+    @include margin-top-short;
   }
+  &__nav {
+    width: 100%;
+    position: relative;
+  }
+
   &__search {
     background: url("../../assets/Icons/search.svg") no-repeat;
-    background-position: 2.5% 50%;
-    height: 2.25rem;
+    background-position: 0.5rem 50%;
     padding-left: 2rem;
+    width: 85%;
+    box-sizing: border-box;
+    border: 1px solid colors.$secondary-pale;
+    border-radius: 4px;
+    background-color: colors.$secondary-light;
+
+    @include form-height;
+    @include margin-short;
   }
+  &__search::placeholder {
+    color: colors.$primary-dark;
+  }
+  &__search:focus {
+    outline: none;
+    border: 2px solid colors.$primary-color;
+  }
+
   &__button {
+    background: url("../../assets/Icons/upload.svg") no-repeat;
+    background-position: 0.5rem 50%;
+    background-size: 1.25rem;
     height: 2.5rem;
+    color: colors.$primary-light;
+    background-color: colors.$primary-color;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    border: none;
+    width: 100%;
+
+    @include margin-short;
   }
+
+  &__button:hover {
+    background-color: colors.$secondary-color;
+    cursor: pointer;
+  }
+
   &__usericon {
     background: url("../../assets/Images/Mohan-muruge.jpg");
     background-size: cover;
     background-position: 15% 50%;
-    height: 2.25rem;
-    width: 2.25rem;
     border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @include avatar-width;
+    @include form-height;
   }
 }

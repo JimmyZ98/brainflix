@@ -7,9 +7,9 @@ function Comments({ selectedVideo }) {
   return (
     <section className="comments">
       <div className="comments__container">
-        <h2 className="commentsNum">
+        <p className="comments__count">
           {selectedVideo.comments.length} Comments
-        </h2>
+        </p>
         <NewComments />
         <CommentsList selectedVideo={selectedVideo} />
       </div>

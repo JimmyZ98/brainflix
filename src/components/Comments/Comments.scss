@@ -1,0 +1,12 @@
+@use "../../styles/partials/colors.scss";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.comments {
+  @include side-margins;
+  @include margin-top-tall;
+
+  &__count {
+    font-weight: 700;
+  }
+}

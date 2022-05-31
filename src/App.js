@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import { Component } from "react";
 import videos from "./data/videos.json";
 import videoDetails from "./data/video-details.json";
@@ -31,7 +31,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="wrapper">
         <Header />
         <MainVideo selectedVideo={this.state.selectedVideo} />
         <VideoDetails selectedVideo={this.state.selectedVideo} />

@@ -6,12 +6,11 @@ import likeIcon from "../../assets/Icons/likes.svg";
 function VideoDetails(props) {
   return (
     <section className="details">
-      <div className="details__title">
-        <h1 className="details__title--text">{props.selectedVideo.title}</h1>
-      </div>
+      <h1 className="details__title">{props.selectedVideo.title}</h1>
+
       <div className="details__vidinfo">
         <div className="details__vidinfo--left">
-          <p className="details__author">By {props.selectedVideo.channel}</p>
+          <p className="details__channel">By {props.selectedVideo.channel}</p>
           <p className="details__date">
             {new Date().toLocaleDateString(props.selectedVideo.timestamp)}
           </p>
@@ -34,8 +33,8 @@ function VideoDetails(props) {
             <p className="details__likes--text">{props.selectedVideo.likes}</p>
           </div>
         </div>
-        <p className="details__text">{props.selectedVideo.description}</p>
       </div>
+      <p className="details__text">{props.selectedVideo.description}</p>
     </section>
   );
 }

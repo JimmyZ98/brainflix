@@ -1,0 +1,14 @@
+@use "../../styles/partials/colors.scss";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.video-list {
+  @include side-margins;
+
+  &__title {
+    font-weight: 700;
+    color: colors.$primary-pale;
+
+    @include margin-short;
+  }
+}

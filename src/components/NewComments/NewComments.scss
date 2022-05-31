@@ -1,0 +1,84 @@
+@use "../../styles/partials/colors.scss";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.comments {
+  &__new {
+    display: flex;
+    justify-content: space-between;
+
+    @include margin-top-tall;
+    @include margin-short;
+    @include padding-short;
+    @include divider;
+  }
+  &__usericon--container {
+    margin-right: 0.5rem;
+    margin-top: 1.25rem;
+    @include avatar-width;
+  }
+  &__usericon {
+    background: url("../../assets/Images/Mohan-muruge.jpg");
+    background-size: cover;
+    background-position: 15% 50%;
+    border-radius: 50%;
+
+    @include avatar-width;
+    @include form-height;
+  }
+}
+.form {
+  width: 100%;
+
+  &__group {
+    @include margin-short;
+  }
+  &__label {
+    display: block;
+    color: colors.$primary-pale;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  &__input {
+    display: block;
+    height: 6rem;
+    width: 100%;
+    border-radius: 4px;
+    padding: 0 0.75rem;
+    border: 1px solid colors.$secondary-pale;
+    background-color: colors.$secondary-light;
+    box-sizing: border-box;
+    padding-bottom: 3.5rem;
+  }
+
+  &__input:focus {
+    outline: none;
+    border: 2px solid colors.$primary-color;
+  }
+  &__input::placeholder {
+    color: colors.$secondary-dark;
+  }
+  &__submit-container {
+    @include tablet {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+  &__submit {
+    background: url("../../assets/Icons/add_comment.svg") no-repeat;
+    background-position: 0.5rem 50%;
+    background-size: 1.25rem;
+    height: 2.5rem;
+    color: colors.$primary-light;
+    background-color: colors.$primary-color;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    border: none;
+    width: 100%;
+  }
+  &__submit:hover {
+    background-color: colors.$secondary-color;
+    cursor: pointer;
+  }
+}
