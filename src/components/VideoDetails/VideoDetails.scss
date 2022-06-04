@@ -24,6 +24,7 @@
       border: none;
     }
   }
+
   &__vidinfo {
     display: flex;
     justify-content: space-between;
@@ -33,9 +34,9 @@
     @include divider;
     @include tablet {
       padding-bottom: 0.75rem;
-      padding-right: 1.5rem;
     }
   }
+
   &__vidinfo--left {
     display: flex;
     flex-direction: column;
@@ -45,16 +46,21 @@
       flex-direction: row;
     }
   }
+
   &__channel {
     font-weight: 700;
 
     @include tablet {
       margin-right: 2rem;
+      font-size: 0.9rem;
+      line-height: 0.75rem;
     }
   }
+
   &__date {
     color: colors.$primary-pale;
   }
+
   &__vidinfo--right {
     display: flex;
     flex-direction: column;
@@ -67,6 +73,7 @@
       margin: 0;
     }
   }
+
   &__views {
     display: flex;
     @include margin-short;
@@ -74,12 +81,15 @@
       margin: 0;
     }
   }
+
   &__views--icon {
     margin-right: 0.5rem;
   }
+
   &__likes {
     display: flex;
   }
+
   &__likes--icon {
     margin-right: 0.5rem;
 
@@ -87,6 +97,7 @@
       margin-left: 2rem;
     }
   }
+
   &__text {
     @include desktop {
       padding-right: 1.5rem;

@@ -13,7 +13,7 @@ function CommentsList({ selectedVideo }) {
             <div className="comments__content">
               <p className="comments__user">{comment.name}</p>
               <p className="comments__date">
-                {new Date().toLocaleDateString(comment.timestamp)}
+                {new Date(comment.timestamp).toLocaleDateString()}
               </p>
               <p className="comments__text">{comment.comment}</p>
             </div>

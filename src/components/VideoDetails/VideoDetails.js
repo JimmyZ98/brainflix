@@ -12,7 +12,7 @@ function VideoDetails(props) {
         <div className="details__vidinfo--left">
           <p className="details__channel">By {props.selectedVideo.channel}</p>
           <p className="details__date">
-            {new Date().toLocaleDateString(props.selectedVideo.timestamp)}
+            {new Date(props.selectedVideo.timestamp).toLocaleDateString()}
           </p>
         </div>
         <div className="details__vidinfo--right">

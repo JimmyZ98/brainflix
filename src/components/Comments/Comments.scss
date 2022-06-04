@@ -14,11 +14,13 @@
   &__count {
     font-weight: 700;
   }
+
   &__content {
     @include desktop {
       padding-right: 1.5rem;
     }
   }
+
   &__date {
     @include desktop {
       position: absolute;

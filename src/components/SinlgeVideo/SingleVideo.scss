@@ -13,6 +13,7 @@
       margin: 0;
     }
   }
+
   &__thumbnail {
     width: 35%;
     height: 3.75rem;
@@ -23,13 +24,14 @@
     background-color: colors.$secondary-pale;
 
     @include tablet {
-      max-width: 7rem;
+      max-width: 6.5rem;
       height: 4rem;
     }
     @include desktop {
       margin: 0;
     }
   }
+
   &__video--right {
     width: 60%;
     display: flex;
@@ -40,6 +42,7 @@
       max-width: 9.75rem;
     }
   }
+
   &__title {
     font-weight: 700;
   }

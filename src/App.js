@@ -20,13 +20,6 @@ class App extends Component {
     });
   };
 
-  videoFilter = (id) => {
-    let chosenVideo = this.state.videoDetails.find((video) => video.id === id);
-    this.setState({
-      selectedVideo: chosenVideo,
-    });
-  };
-
   render() {
     return (
       <div className="wrapper">

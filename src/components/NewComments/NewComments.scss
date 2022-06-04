@@ -18,6 +18,7 @@
       padding-right: 1.5rem;
     }
   }
+
   &__usericon--container {
     margin-right: 1rem;
     margin-top: 1.25rem;
@@ -27,6 +28,7 @@
       margin-right: 1.5rem;
     }
   }
+
   &__usericon {
     background: url("../../assets/Images/Mohan-muruge.jpg");
     background-size: cover;
@@ -37,6 +39,7 @@
     @include form-height;
   }
 }
+
 .form {
   width: 100%;
 
@@ -54,12 +57,14 @@
       margin-right: 1.5rem;
     }
   }
+
   &__label {
     display: block;
     color: colors.$primary-pale;
     font-weight: 700;
     margin-bottom: 0.25rem;
   }
+
   &__input {
     display: block;
     height: 6rem;
@@ -81,15 +86,18 @@
     outline: none;
     border: 2px solid colors.$primary-color;
   }
+
   &__input::placeholder {
     color: colors.$secondary-dark;
   }
+
   &__submit-container {
     @include tablet {
       display: flex;
       flex-direction: row-reverse;
     }
   }
+
   &__submit {
     background: url("../../assets/Icons/add_comment.svg") no-repeat;
     background-position: 0.5rem 50%;
@@ -109,6 +117,7 @@
       margin-top: auto;
     }
   }
+
   &__submit:hover {
     background-color: colors.$secondary-color;
     cursor: pointer;

@@ -15,6 +15,7 @@
       margin: 0 auto;
     }
   }
+
   &__logo {
     background-image: url("../../assets/Logo/BrainFlix-logo.svg");
     background-size: cover;
@@ -29,6 +30,7 @@
       margin: auto 0;
     }
   }
+
   &__nav {
     width: 100%;
     position: relative;
@@ -57,9 +59,11 @@
       max-width: 15.5rem;
     }
   }
+
   &__search::placeholder {
     color: colors.$primary-dark;
   }
+
   &__search:focus {
     outline: none;
     border: 2px solid colors.$primary-color;
