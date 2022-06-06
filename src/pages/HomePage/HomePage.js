@@ -1,9 +1,8 @@
 import { Component } from "react";
-import videos from "../data/videos.json";
-import videoDetails from "../data/video-details.json";
-import Header from "../components/Header/Header";
-import MainVideo from "../components/MainVideo/MainVideo";
-import PageBottom from "../components/PageBottom/PageBottom";
+import videoDetails from "../../data/video-details.json";
+import Header from "../../components/Header/Header";
+import MainVideo from "../../components/MainVideo/MainVideo";
+import PageBottom from "../../components/PageBottom/PageBottom";
 import axios from "axios";
 
 const API_URL = "https://project-2-api.herokuapp.com";
@@ -30,7 +29,6 @@ class HomePage extends Component {
 
       this.getSelectedVideo(videoId);
     });
-    console.log(videos);
   }
 
   componentDidUpdate(previousProps) {

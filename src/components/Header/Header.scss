@@ -81,6 +81,9 @@
     font-size: 0.75rem;
     border: none;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @include margin-short;
     @include tablet {
