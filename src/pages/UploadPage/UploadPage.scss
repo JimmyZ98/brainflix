@@ -12,6 +12,11 @@
 
   &__inner {
     @include side-margins;
+    @include desktop {
+      max-width: 63.75rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   &__title {
     font-size: 1.5rem;
@@ -20,17 +25,39 @@
     @include margin-top-tall;
     @include tablet {
       font-size: 2.0625rem;
-      margin-bottom: 0;
+      @include margin-short;
+      @include padding-short;
+      @include divider;
     }
   }
 
   &__form-group {
     width: 100%;
 
-    @include margin-short;
+    @include margin-tall;
     @include tablet {
-      margin-bottom: 0;
       margin-right: 1.5rem;
+    }
+    @include desktop {
+      @include margin-short;
+    }
+  }
+
+  &__inputs {
+    @include desktop {
+      display: flex;
+    }
+  }
+
+  &__form--right {
+    @include desktop {
+      width: 100%;
+    }
+  }
+
+  &__form--left {
+    @include desktop {
+      width: 20rem;
     }
   }
 
@@ -47,10 +74,15 @@
     background-position: center;
     height: 50vw;
     border-radius: 4px;
+    background-color: colors.$secondary-pale;
 
     @include tablet {
-      max-height: 12rem;
+      height: 25vw;
       width: 50%;
+    }
+    @include desktop {
+      height: 10rem;
+      width: 20rem;
     }
   }
   &__form-input {
@@ -83,10 +115,17 @@
     padding-bottom: 3.5rem;
   }
 
-  &__form-submit-container {
+  &__form-submit--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     @include tablet {
-      display: flex;
       flex-direction: row-reverse;
+      @include margin-tall;
+    }
+    @include desktop {
+      @include padding-top-short;
+      @include divider-top;
     }
   }
 
@@ -102,16 +141,29 @@
     font-size: 0.75rem;
     border: none;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @include tablet {
       width: 9.5rem;
-      margin-bottom: 0;
-      margin-top: auto;
+      margin: 0;
+      margin-left: 5rem;
     }
   }
 
   &__form-submit:hover {
     background-color: colors.$secondary-color;
     cursor: pointer;
+  }
+
+  &__form-cancel {
+    color: colors.$primary-color;
+    font-weight: 700;
+    margin: 2rem 0;
+
+    @include tablet {
+      margin: 0;
+    }
   }
 }
