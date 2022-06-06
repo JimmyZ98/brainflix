@@ -38,6 +38,10 @@
   border-bottom: 2px solid colors.$secondary-pale;
 }
 
+@mixin divider-top {
+  border-top: 2px solid colors.$secondary-pale;
+}
+
 @mixin padding-short {
   padding-bottom: 1rem;
 

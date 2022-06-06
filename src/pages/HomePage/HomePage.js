@@ -17,16 +17,12 @@ class HomePage extends Component {
   };
 
   componentDidMount() {
-    console.log("component did mount");
-
     axios.get(`${API_URL}/videos${API_KEY_STRING}`).then((response) => {
       this.setState({
         videos: response.data,
       });
 
       const videoId = this.props.match.params.videoId || response.data[0].id;
-      console.log(videoId);
-
       this.getSelectedVideo(videoId);
     });
   }
@@ -57,7 +53,6 @@ class HomePage extends Component {
   };
 
   render() {
-    console.log("render");
     return (
       <div className="wrapper">
         <Header />

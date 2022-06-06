@@ -4,11 +4,9 @@
 
 .main {
   width: 100%;
-
-  @include tablet {
-    background-color: colors.$secondary-dark;
-    display: flex;
-  }
+  max-height: 50vh;
+  background-color: colors.$secondary-dark;
+  display: flex;
 
   &__video {
     width: 100%;
