@@ -1,10 +1,13 @@
 import React from "react";
 import Header from "../../components/Header/Header";
 import "./UploadPage.scss";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 function UploadPage() {
-  const uploadAlert = () => {
+  const history = useHistory();
+
+  const handleSubmit = () => {
+    history.push("/");
     alert("Upload successful");
   };
 
@@ -15,7 +18,7 @@ function UploadPage() {
         <div className="upload__inner">
           <h1 className="upload__title">Upload Video</h1>
 
-          <form className="upload__form">
+          <form className="upload__form" onSubmit={handleSubmit}>
             <div className="upload__inputs">
               <div className="upload__form-group upload__form--left">
                 <label className="upload__form-label" htmlFor="videoThumbnail">
@@ -58,15 +61,12 @@ function UploadPage() {
               </div>
             </div>
             <div className="upload__form-submit--container">
-              <Link
-                to="/"
-                type="submit"
-                className="upload__form-submit"
-                onClick={uploadAlert}
-              >
+              <button type="submit" className="upload__form-submit">
                 PUBLISH
+              </button>
+              <Link to="/" className="upload__form-cancel">
+                CANCEL
               </Link>
-              <p className="upload__form-cancel">CANCEL</p>
             </div>
           </form>
         </div>

@@ -9,22 +9,24 @@ const API_URL = "https://project-2-api.herokuapp.com";
 const API_KEY_STRING = "?api_key=e82413f2-dc28-4f4e-8bb9-704af807b4f4";
 
 class HomePage extends Component {
-  constvi;
   state = {
     videos: [],
     selectedVideo: videoDetails[0],
-    invalidVideo: false,
   };
 
   componentDidMount() {
-    axios.get(`${API_URL}/videos${API_KEY_STRING}`).then((response) => {
-      this.setState({
-        videos: response.data,
+    axios
+      .get(`${API_URL}/videos${API_KEY_STRING}`)
+      .then((response) => {
+        this.setState({
+          videos: response.data,
+        });
+        const videoId = this.props.match.params.videoId || response.data[0].id;
+        this.getSelectedVideo(videoId);
+      })
+      .catch((error) => {
+        console.log(error);
       });
-
-      const videoId = this.props.match.params.videoId || response.data[0].id;
-      this.getSelectedVideo(videoId);
-    });
   }
 
   componentDidUpdate(previousProps) {
@@ -42,13 +44,10 @@ class HomePage extends Component {
       .then((response) => {
         this.setState({
           selectedVideo: response.data,
-          invalidVideo: false,
         });
       })
       .catch((error) => {
-        this.setState({
-          invalidVideo: true,
-        });
+        console.log(error);
       });
   };
 
