@@ -2,11 +2,23 @@ import React from "react";
 import Header from "../../components/Header/Header";
 import "./UploadPage.scss";
 import { Link, useHistory } from "react-router-dom";
+import axios from "axios";
 
 function UploadPage() {
   const history = useHistory();
 
-  const handleSubmit = () => {
+  const handleSubmit = (ev) => {
+    axios.post("http://localhost:8080/videos", {
+      title: ev.target.videoTitle.value,
+      description: ev.target.videoDescription.value,
+      channel: "Your Channel",
+      image: "http://localhost:8080/images/Upload-video-preview.jpg",
+      views: Math.floor(Math.random() * 1000000),
+      likes: Math.floor(Math.random() * 100000),
+      timestamp: Date.now(),
+      comments: [],
+    });
+
     history.push("/");
     alert("Upload successful");
   };
