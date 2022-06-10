@@ -5,8 +5,7 @@ import MainVideo from "../../components/MainVideo/MainVideo";
 import PageBottom from "../../components/PageBottom/PageBottom";
 import axios from "axios";
 
-const API_URL = "https://project-2-api.herokuapp.com";
-const API_KEY_STRING = "?api_key=e82413f2-dc28-4f4e-8bb9-704af807b4f4";
+const API_URL = "http://localhost:8080";
 
 class HomePage extends Component {
   state = {
@@ -16,7 +15,7 @@ class HomePage extends Component {
 
   componentDidMount() {
     axios
-      .get(`${API_URL}/videos${API_KEY_STRING}`)
+      .get(`${API_URL}/videos`)
       .then((response) => {
         this.setState({
           videos: response.data,
@@ -40,7 +39,7 @@ class HomePage extends Component {
 
   getSelectedVideo = (videoId) => {
     axios
-      .get(`${API_URL}/videos/${videoId}${API_KEY_STRING}`)
+      .get(`${API_URL}/videos/${videoId}`)
       .then((response) => {
         this.setState({
           selectedVideo: response.data,
